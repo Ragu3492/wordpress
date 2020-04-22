@@ -1,6 +1,6 @@
 ##### EC2 Instance ######
 
-resource "aws_instance" "Drupal" {
+resource "aws_instance" "wordpress" {
  ami                         = var.image
  instance_type               = var.instance_type
  key_name                    = var.key
