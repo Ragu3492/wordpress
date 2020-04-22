@@ -5,7 +5,7 @@ resource "aws_instance" "wordpress" {
  instance_type               = var.instance_type
  key_name                    = var.key
  monitoring                  = true
- user_data                   = data.template_file.drupal.rendered
+ user_data                   = data.template_file.wordpress.rendered
  vpc_security_group_ids      = [aws_security_group.sg.id]
  subnet_id                   = aws_subnet.public_subnet.id
  associate_public_ip_address = true 
