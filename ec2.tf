@@ -18,7 +18,7 @@ resource "aws_instance" "wordpress" {
    Name        = "wordpress"
    }
 provisioner "local-exec" {
-    command = "echo ${aws_instance.Drupal.public_ip} >> /var/lib/jenkins/workspace/drupal/publicip"
+    command = "echo ${aws_instance.Drupal.public_ip} >> /var/lib/jenkins/workspace/Wordpress/publicip"
 }
 
 #user_data = <<HEREDOC
