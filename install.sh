@@ -40,8 +40,8 @@ sudo cp /root/wp-config/wp-config.php /var/www/html/
 ip=$(dig +short myip.opendns.com @resolver1.opendns.com)
 wp core install --url=$ip --title=zippyops --admin_user=zippyops --admin_password=zippyops --admin_email=admin@zippyops.com --allow-root
 sudo chown -R apache /var/www/html
-wp theme install Consulting --allow-root
-wp theme activate consulting --allow-root
+#wp theme install Consulting --allow-root
+#wp theme activate consulting --allow-root
 wp plugin install wordpress-importer --activate --allow-root
 
 sudo sed -i 's/#PubkeyAuthentication yes/PubkeyAuthentication yes/g' /etc/ssh/sshd_config
